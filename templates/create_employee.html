@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employee</title>
+</head>
+<body>
+    <h1>Create New Employee</h1>
+    
+    <form method="POST">
+        Employee ID: <input type="text" name="employee_id" required><br>
+        Name: <input type="text" name="name" required><br>
+        Email: <input type="email" name="email" required><br>
+        Phone: <input type="text" name="phone" required><br>
+        Position: 
+        <select name="position" required>
+            <option value="Software Developer">Software Developer</option>
+            <option value="Business Analyst">Business Analyst</option>
+            <option value="Project Manager">Project Manager</option>
+            <!-- Add more positions as needed -->
+        </select><br>
+        <button type="submit">Create Employee</button>
+    </form>
+    
+    <a href="/admin/employees">Back to Employee List</a>
+</body>
+</html>

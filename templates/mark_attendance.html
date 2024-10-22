@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+</head>
+<body>
+    <h1>Mark Attendance</h1>
+    <form method="POST">
+        <label for="employee_id">Employee:</label>
+        <select name="employee_id" required>
+            {% for employee in employees %}
+            <option value="{{ employee[0] }}">{{ employee[1] }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="attendance_date">Date:</label>
+        <input type="date" name="attendance_date" required><br>
+
+        <label for="status">Status:</label>
+        <select name="status" required>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="On Leave">On Leave</option>
+        </select><br>
+
+        <label for="remarks">Remarks:</label>
+        <input type="text" name="remarks"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Manage Employees</h2>
+        <ul>
+            <li><a href="{{ url_for('view_employees') }}">View Employees</a></li>
+            <li><a href="{{ url_for('create_employee') }}">Add Employee</a></li>
+        </ul>
+
+        <h2>Attendance Management</h2>
+        <ul>
+            <li><a href="{{ url_for('view_attendance') }}">View Attendance</a></li>
+            <li><a href="{{ url_for('mark_attendance') }}">Mark Attendance</a></li>
+        </ul>
+
+        <h2>Leave Requests</h2>
+        <ul>
+            <li><a href="{{ url_for('manage_leave_requests') }}">Manage Leave Requests</a></li>
+        </ul>
+    </main>
+</body>
+</html>

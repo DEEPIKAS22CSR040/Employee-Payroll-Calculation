@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Signup</title></head>
+<body>
+    <h2>Signup</h2>
+    <form action="{{ url_for('signup') }}" method="POST">
+        <label>Email:</label><input type="email" name="email" required><br>
+        <label>Password:</label><input type="password" name="password" required><br>
+        <label>Role:</label>
+        <select name="role">
+            <option value="admin">Admin</option>
+            <option value="employee">Employee</option>
+        </select><br>
+        <label>Employee ID (for employees only):</label><input type="text" name="employee_id"><br>
+        <button type="submit">Signup</button>
+    </form>
+</body>
+</html>

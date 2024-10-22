@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Leave Requests</title>
+</head>
+<body>
+    <h1>Manage Leave Requests</h1>
+    <table border="1">
+        <tr>
+            <th>Employee</th>
+            <th>Leave Start</th>
+            <th>Leave End</th>
+            <th>Reason</th>
+            <th>Action</th>
+        </tr>
+        {% for request in leave_requests %}
+        <tr>
+            <td>{{ request[1] }}</td>
+            <td>{{ request[2] }}</td>
+            <td>{{ request[3] }}</td>
+            <td>{{ request[4] }}</td>
+            <td>
+                <form method="POST">
+                    <input type="hidden" name="request_id" value="{{ request[0] }}">
+                    <button type="submit" name="action" value="approve">Approve</button>
+                    <button type="submit" name="action" value="reject">Reject</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

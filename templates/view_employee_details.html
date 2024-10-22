@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="static/styles.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ employee[1] }}!</h1> <!-- Assuming employee[1] is the name -->
+        <nav>
+            <a href="{{ url_for('leave_request') }}">Request Leave</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Your Information</h2>
+        <p><strong>ID:</strong> {{ employee[0] }}</p> <!-- Assuming employee[0] is ID -->
+        <p><strong>Email:</strong> {{ employee[2] }}</p> <!-- Assuming employee[2] is Email -->
+        <p><strong>Phone:</strong> {{ employee[3] }}</p> <!-- Assuming employee[3] is Phone -->
+        <p><strong>Position:</strong> {{ employee[4] }}</p> <!-- Assuming employee[4] is Position -->
+        <p><strong>Salary: </strong>{{ employee[5] }}</p>
+    </main>
+</body>
+</html>
